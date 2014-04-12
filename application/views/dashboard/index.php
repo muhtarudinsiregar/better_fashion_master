@@ -1,13 +1,15 @@
 <div id="page-wrapper">
 	<div class="row">
 		<div class="col-lg-12">
-			<h1>Dashboard <small>Statistics Overview</small></h1>
+		<legend>
+			<h3>Dashboard Admin<span class="ico-setting"><i class="fa fa-home"></i></span></h3>
+		</legend>
 			<!-- <ol class="breadcrumb">
 				<li class="active"><i class="fa fa-dashboard"></i> Dashboard</li>
 			</ol> -->
 			<div class="alert alert-success alert-dismissable">
 				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-				Halaman Admin <a class="alert-link" href="http://startbootstrap.com">Start Bootstrap</a>! Feel free to use this template for your admin needs! We are using a few different plugins to handle the dynamic tables and charts, so make sure you check out the necessary documentation links provided.
+				Selamat Datang di Halaman Admin 
 			</div>
 		</div>
 	</div><!-- /.row -->
@@ -39,12 +41,39 @@
 				</a>
 			</div>
 		</div>
+		<div class="col-lg-3">
+			<div class="panel panel-warning">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-xs-6">
+							<i class="fa fa-check fa-5x"></i>
+						</div>
+						<div class="col-xs-6 text-right">
+							<p class="announcement-heading">12</p>
+							<p class="announcement-text">To-Do Items</p>
+						</div>
+					</div>
+				</div>
+				<a href="#">
+					<div class="panel-footer announcement-bottom">
+						<div class="row">
+							<div class="col-xs-6">
+								Complete Tasks
+							</div>
+							<div class="col-xs-6 text-right">
+								<i class="fa fa-arrow-circle-right"></i>
+							</div>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
 	</div><!-- /.row -->
 	<div class="row">
 			<div class="col-lg-4">
-			<div class="panel panel-primary">
+			<div class="panel panel-default">
 				<div class="panel-heading">
-					<h3 class="panel-title"><i class="fa fa-money"></i> Daftar Artikel</h3>
+					<h3 class="panel-title"><i class="fa fa-folder"></i> Daftar Artikel Terbaru</h3>
 				</div>
 				<div class="panel-body">
 					<div class="table-responsive">
@@ -54,14 +83,22 @@
 									<th> Nomer <i class="fa fa-sort"></i></th>
 									<th> Judul Artikel <i class="fa fa-sort"></i></th>
 									<th> Tanggal Posting <i class="fa fa-sort"></i></th>
-									<!-- <th>Amount (USD) <i class="fa fa-sort"></i></th> -->
-									<th id="aksi">
-										Aksi<i class="fa fa-sort"></i>
-									</th>
 								</tr>
 							</thead>
 							<tbody>
-								
+							<?php 
+								$no = 1;
+								foreach ($artikel_terbaru as $value) {
+							 ?>
+								<tr>
+									<td><?php echo $no; ?></td>
+									<td><?php echo $value->judul; ?></td>
+									<td><?php echo $value->tanggal; ?></td>
+								</tr>
+							<?php 
+								$no++;
+								}; 
+							?>
 							</tbody>
 						</table>
 					</div>

@@ -21,23 +21,27 @@ class Artikel extends CI_Controller {
 		// Add a new item
 	public function tambah_artikel()
 	{
-		$this->form_validation->set_rules('judul', 'Judul', 'required');
-		$this->form_validation->set_rules('isi_artikel', 'Isi Artikel', 'required');
-		
+
+		$this->form_validation->set_error_delimiters('<div class="alert alert-danger">','</div>');
 		$data['content'] = "artikel/tambah_artikel";
 		$data['judul'] = "Tambah Artikel";
 
-
+		
+		$this->form_validation->set_rules('judul', 'Judul', 'required');
+		$this->form_validation->set_rules('isi_artikel', 'Isi Artikel', 'required');
+		$this->form_validation->set_rules('tag', 'Tag', 'trim|xss_clean');
+		$this->form_validation->set_rules('simpan_sebagai', 'Simpan Sebagai', 'trim|required|xss_clean');
+		
 		if ($this->form_validation->run() == FALSE){
 			$this->load->view('template/admin/index',$data);
-			// $this->form_validation->set_message('required', 'Tidak Boleh Kosong');
+			 // echo validation_errors(); 
 		}else{
 			$this->proses_tambah();
 		}
 
 	}
 
-	public function proses_tambah($value='')
+	public function proses_tambah()
 	{
 		date_default_timezone_set('Asia/Jakarta');
 	    // then call the date functions
@@ -47,11 +51,18 @@ class Artikel extends CI_Controller {
 			'judul'=>$this->input->post('judul'),
 			'tanggal'=>$date,
 			'isi'=>$this->input->post('isi_artikel'),
+			'status'=>$this->input->post('simpan_sebagai'),
 			'tag'=>$this->input->post('tag')
 			);
 		// var_dump($data_input);
-		$this->artikel_model->tambah_artikel($data_input);
-		redirect('artikel');
+		$notifikasi = $this->artikel_model->tambah_artikel($data_input);
+		if (empty($notifikasi)) {
+			$this->session->set_flashdata('notifikasi', '<div class="alert alert-success">Post Berhasil Ditambahkan <i class="glyphicon glyphicon-thumbs-up"></i></div>');
+			redirect('artikel/tambah_artikel');
+		}else{
+			$this->session->set_flashdata('notifikasi', '<div class="alert alert-danger">Gagal Menambahkan Post!!</div>');
+		}
+		
 	}
 
 	public function edit_artikel($id)
@@ -76,7 +87,7 @@ class Artikel extends CI_Controller {
 			'tanggal'=>$date,
 			'isi'=>$this->input->post('isi_artikel')
 			);
-
+		
 		$this->artikel_model->update_artikel($data_artikel,$id);
 		redirect('artikel');
 	}
@@ -85,8 +96,18 @@ class Artikel extends CI_Controller {
 	public function hapus_artikel($id)
 	{
 		$this->artikel_model->hapus_artikel($id);
+		$this->session->set_flashdata('notifikasi', '<div class="alert alert-success alert-dismissable">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				<strong>Berhasil </strong>Menghapus Artikel
+			</div>');
 		redirect('artikel');
+		
 	}
+
+	
+
+
+	
 
 	public function blog()
 	{

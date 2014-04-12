@@ -39,8 +39,16 @@ class Barang_model extends CI_Model {
 	}
 
 	function update_barang($id,$data_update)
-	{
+	{	
 		$query = $this->db->update('barang',$data_update,array('id'=>$id));
+		// var_dump($query);
+	}
+	function hapus_file_gambar($id)
+	{
+		$this->db->select('foto,foto_asli');
+
+		$query = $this->db->get_where('barang',array('id' =>$id));
+		return $query->row();
 	}
 }
 

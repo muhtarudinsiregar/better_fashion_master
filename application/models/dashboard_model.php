@@ -20,6 +20,28 @@ class Dashboard_model extends CI_Model {
 		$query = $this->db->update('setting',$data_update,array('id_setting'=>$id));
 	}
 
+	public function artikel_terbaru()
+	{
+		
+		$this->db->limit(3);
+		$this->db->order_by('id desc');
+		$query = $this->db->get('artikel');
+		return $query->result();
+	}
+
+	function find($kata_kunci)
+	{	
+		$this->db->like('nama', $kata_kunci); 
+		$query = $this->db->get('kategori');
+	
+		// $query = $this->db->get('artikel');
+
+		if (is_null($query)) {
+			echo "Pencarian Tidak Ditemukan";
+		}
+		return $query->result();
+	}
+
 	
 
 }

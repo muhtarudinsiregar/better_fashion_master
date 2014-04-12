@@ -9,14 +9,6 @@ class User extends CI_Controller {
 
 	}
 
-	public function tes()
-	{
-		$data['judul'] = "HAlaman TES";
-		$data['content']="artikel/tampil_artikel";
-		$this->load->view('template/admin/index',$data);
-		// var_dump($data['content']);
-	}
-	
 		// List all your items
 	public function index( $offset = 0 )
 	{

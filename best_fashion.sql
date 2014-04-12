@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Inang: 127.0.0.1
--- Waktu pembuatan: 25 Mar 2014 pada 14.09
+-- Waktu pembuatan: 01 Apr 2014 pada 15.33
 -- Versi Server: 5.5.32
 -- Versi PHP: 5.4.19
 
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `about` (
 --
 
 INSERT INTO `about` (`id`, `visi`, `misi`) VALUES
-(1, 'menjadikan toko kami yang terbaik dan terindah by noah band 123 tes', 'membuat para kawula muda menjadi fashionista');
+(1, 'asasas', 'membuat para kawula muda menjadi fashionista tes');
 
 -- --------------------------------------------------------
 
@@ -53,19 +53,23 @@ CREATE TABLE IF NOT EXISTS `artikel` (
   `judul` varchar(250) NOT NULL,
   `tanggal` text NOT NULL,
   `isi` text NOT NULL,
+  `status` varchar(30) NOT NULL,
   `tag` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
 
 --
 -- Dumping data untuk tabel `artikel`
 --
 
-INSERT INTO `artikel` (`id`, `judul`, `tanggal`, `isi`, `tag`) VALUES
-(3, 'diskon123', '21:38:24 2014-03-16', '<p>diskon akhir tahun emang keren</p>', ''),
-(4, 'diskon', '07:16:45 2014-02-01', '<p>diskon akhir tahun emang kerenq</p>', ''),
-(5, 'latihan posting', '13:46:29 2014-03-16', 'latihan dong', ''),
-(6, 'diskon baru akhir tahun', '22:01:29 2014-03-18', 'ada yang baru lho dari better fashion <3', 'tag,afafaf,asas');
+INSERT INTO `artikel` (`id`, `judul`, `tanggal`, `isi`, `status`, `tag`) VALUES
+(3, 'diskon123', '21:38:24 2014-03-16', '<p>diskon akhir tahun emang keren</p>', 'publish', 'celana-panjang,street-jeans'),
+(4, 'diskon', '07:16:45 2014-02-01', '<p>diskon akhir tahun emang kerenq</p>', 'publish', 'baju,baju-jeans,baju-bajuan'),
+(5, 'latihan posting', '13:46:29 2014-03-16', 'latihan dong', 'draft', 'celana,celana-macan-tutul'),
+(6, 'diskon baru akhir tahun', '22:01:29 2014-03-18', 'ada yang baru lho dari better fashion <3', 'publish', 'tag,afafaf,asas'),
+(8, 'judul-judulan', '15:21:43 2014-04-01', 'postingan', 'Publish', 'tag,tags,tag2'),
+(9, 'te', '15:22:33 2014-04-01', 'ssas', 'Draft', 'as'),
+(10, 'tes', '16:14:10 2014-04-01', 'tes', 'Draft', '12,41,4');
 
 -- --------------------------------------------------------
 
@@ -80,18 +84,20 @@ CREATE TABLE IF NOT EXISTS `barang` (
   `detail_barang` text NOT NULL,
   `kategori` varchar(255) NOT NULL,
   `foto` varchar(250) NOT NULL,
+  `foto_asli` varchar(250) NOT NULL,
+  `tags` varchar(250) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=27 ;
 
 --
 -- Dumping data untuk tabel `barang`
 --
 
-INSERT INTO `barang` (`id`, `nama`, `harga`, `detail_barang`, `kategori`, `foto`) VALUES
-(1, 'Social Mediaisme', 120000, 'bahan cotten combed 20', 'baju', '7178aul_thumb.png'),
-(2, 'gorillaz concert', 100000, 'cotton combed 10x', 'baju', 'wallpaper-245827_thumb.jpg'),
-(3, 'celana ketat', 100000, 'harga murah', 'celana_panjang', '1_thumb.jpg'),
-(4, 'baju ', 9000, 'harga', 'baju', '1235445_10200127664107855_448582382_n_thumb.jpg');
+INSERT INTO `barang` (`id`, `nama`, `harga`, `detail_barang`, `kategori`, `foto`, `foto_asli`, `tags`) VALUES
+(2, 'gorillaz concert', 100000, 'cotton combed 10x', 'baju', 'wallpaper-245827_thumb.jpg', '', ''),
+(4, 'baju ', 9000, 'harga', 'baju', '1235445_10200127664107855_448582382_n_thumb.jpg', '', ''),
+(6, 'abingdon boys clothing', 50000, 'baju  karya abingdon boys for u all, grab it fast!!!', 'baju', 'wallpaper-653922_thumb.jpg', '', 'band,abingdon boys,japan'),
+(7, 'LLoyd ', 120000, 'terbuat dari bahan yang alami. dari dari benang-benang pilihan terbaik.', 'baju', 'lloud-hairstyle-s1_thumb.jpg', 'lloud-hairstyle-s1.jpg', 'cloth,men,casual,better fashion,jeans');
 
 -- --------------------------------------------------------
 
@@ -124,7 +130,7 @@ CREATE TABLE IF NOT EXISTS `kategori` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nama` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=79 ;
 
 --
 -- Dumping data untuk tabel `kategori`
@@ -135,7 +141,8 @@ INSERT INTO `kategori` (`id`, `nama`) VALUES
 (2, 'celana jeans112'),
 (3, 'celana gombrang'),
 (4, 'celana panjang batik'),
-(5, 'baju bola');
+(5, 'baju bola'),
+(60, 'jeans batik');
 
 -- --------------------------------------------------------
 
@@ -163,6 +170,7 @@ CREATE TABLE IF NOT EXISTS `setting` (
   `twitter` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `g_plus` varchar(100) NOT NULL,
+  `no_telpon` varchar(12) NOT NULL,
   `informasi` varchar(100) NOT NULL,
   PRIMARY KEY (`id_setting`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
@@ -171,8 +179,8 @@ CREATE TABLE IF NOT EXISTS `setting` (
 -- Dumping data untuk tabel `setting`
 --
 
-INSERT INTO `setting` (`id_setting`, `facebook`, `twitter`, `email`, `g_plus`, `informasi`) VALUES
-(1, 'https://www.facebook.com/1', 'https://twitter.com/', 'better_fashion@gmail.com', 'https://plus.google.com/u/0/112271661378486753881', '<p>Telpon : 087755925565</p>\r\n\r\n<p>Lokasi : </p>');
+INSERT INTO `setting` (`id_setting`, `facebook`, `twitter`, `email`, `g_plus`, `no_telpon`, `informasi`) VALUES
+(1, 'https://www.facebook.com/better-fashion', 'https://twitter.com/better_fashion', 'better_fashion@gmail.com', 'https://plus.google.com/u/0/112271661378486753881', '087755925565', 'Better Fashion adalah distro untuk kawula muda yang berada di daerah');
 
 -- --------------------------------------------------------
 

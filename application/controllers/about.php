@@ -18,7 +18,7 @@ class About extends CI_Controller {
         $this->load->view('template/index', $data);
 	}
     // ======================dashboard===================
-	public function edit($value='')
+	public function edit()
 	{
 		  $data = array(
             'tampil'=>$this->about_model->tampil_visimisi(),
@@ -29,16 +29,7 @@ class About extends CI_Controller {
         $this->load->view('template/admin/index', $data);
 	}
 
-	public function edit_visi($id)
-    {
-        $data = array(
-            'judul'=>'Edit Visi',
-            'content'=>'visi/edit_visi',
-            'data_edit'=>$this->about_model->edit_visi($id)
-            );
-
-        $this->load->view('template/admin/index',$data);
-    }
+	
 
     public function update_visi($id)
     {
@@ -51,16 +42,7 @@ class About extends CI_Controller {
     }
 
 
-	public function edit_Misi($id)
-    {
-        $data = array(
-            'judul'=>'Edit Visi',
-            'content'=>'visi/edit_visi',
-            'data_edit'=>$this->about_model->edit_visi($id)
-            );
-
-        $this->load->view('template/admin/index',$data);
-    }
+	
 
     public function update_Misi($id)
     {

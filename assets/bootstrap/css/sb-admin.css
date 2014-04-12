@@ -9,9 +9,30 @@ For more info and more free Bootstrap 3 HTML themes, visit http://startbootstrap
 /* ATTN: This is mobile first CSS - to update 786px and up screen width use the media query near the bottom of the document! */
 
 /* Global Styles */
-
+.login-heading{
+  background-color: #f8f8f8;
+}
+.body-login{
+  background-color: #f8f8f8;
+}
+.login-panel{
+  margin-top: 85px;
+  /*background-color: #f8f8f8;*/
+}
+#cari{
+  margin-bottom: 20px;
+}
+#text-barang{
+  height: 125px !important;
+}
+#link-navbar{
+  color: white;
+}
 #grup-cari{
   margin-top: 20px;
+}
+#keterangan {
+  height: 125px !important;
 }
 #query{
   border-radius: 0px;
@@ -20,6 +41,9 @@ For more info and more free Bootstrap 3 HTML themes, visit http://startbootstrap
   -webkit-border-radius: 0 !important;
      -moz-border-radius: 0 !important;
           border-radius: 0 !important;
+}
+.ico-setting{
+  margin-left: 10px;
 }
 
 .navbar-inverse .navbar-brand{
@@ -43,7 +67,7 @@ nav ul li a:hover {
 }
 
 #isi_artikel {
-  height: 200px;
+  height: 150px;
 }
 #aksi{
   text-align: center;
@@ -58,7 +82,7 @@ body {
 
 #page-wrapper {
   width: 100%;
-  padding: 5px 15px;
+  padding: 5px 1px;
 }
 
 /* Nav Messages */
@@ -131,7 +155,7 @@ table.tablesorter thead tr th:hover {
   }
 
   #page-wrapper {
-	padding: 15px 25px;
+	padding: 1px 25px;
   }
 
   /* Side Nav */

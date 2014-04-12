@@ -12,16 +12,16 @@
 			</div>
 			<div class="panel panel-primary">
 				<div class="panel-heading">
-					<h3 class="panel-title"><i class="glyphicon glyphicon-pencil"></i> &nbsp; Form Tambah Barang</h3>
+					<h3 class="panel-title"><i class="glyphicon glyphicon-pencil"></i> &nbsp; Form Edit Barang</h3>
 				</div>
 				<div class="panel-body">
-					<?php form_open_multipart('barang/proses_upload') ?>
-					<form method="post" enctype="multipart/form-data" class="form-horizontal" role="form">
+					<!-- <?php form_open_multipart('barang/update_barang/'.$data_edit->id); ?> -->
+					<form method="post" enctype="multipart/form-data" class="form-horizontal" role="form" action="<?php echo site_url('barang/update_barang/'.$data_edit->id) ?>">
 						 <!-- <?php echo $error; ?>  -->
 						<div class="form-group">
 							<label for="userfile" class="control-label col-lg-3">Pilih gambar Barang : </label>
 							<div class="col-lg-3">
-								<input type="file" name="userfile" class="" />  
+								<input type="file" name="userfile" class="">  
 							</div>
 						</div>
 						<div class="form-group">
@@ -36,31 +36,31 @@
 						<div class="form-group">
 							<label class="control-label col-lg-3" for="nama">Nama Barang :</label>
 							<div class="col-lg-5">
-								<input class="form-control" type="text" name="nama">
+								<input class="form-control" type="text" name="nama" value="<?php echo $data_edit->nama; ?>">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="harga" class="control-label col-lg-3">Harga Barang :</label>
 							<div class="col-lg-3">
-								<input class="form-control"type="text" name="harga">
+								<input class="form-control"type="text" name="harga" value="<?php echo $data_edit->harga; ?>">
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="detail_barang" class="control-label col-lg-3">Keterangan Barang: </label>
 							<div class="col-lg-5">
-								<textarea type="text" name="detail_barang" class="form-control" id="text-barang"></textarea>
+								<textarea type="text" name="detail_barang" class="form-control" id="text-barang"><?php echo $data_edit->detail_barang; ?></textarea>
 							</div>
 						</div>
 						<div class="form-group">
 							<label for="tag" class="control-label col-lg-3">Tags Barang :</label>
 							<div class="col-lg-6">
-								<input type="text" class="form-control input-sm" id="judul" name="tag" data-role="tagsinput" placeholder="tag">
+								<input type="text" class="input-sm" id="judul" name="tag" data-role="tagsinput" placeholder="tag" value="">
 							</div>
 						</div>                                      
 						<div class="form-group">
 							<div class="col-lg-offset-3 col-lg-9">
 								<input type="submit" value="Upload" name="upload" class="btn btn-primary" />
-								<input type="submit" value="Preview Image" class="btn btn-danger">
+								<input type="reset" value="Preview Image" class="btn btn-danger">
 							</div>
 						</div>
 						<?php echo form_close(); ?>

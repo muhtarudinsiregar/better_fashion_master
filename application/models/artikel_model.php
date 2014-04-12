@@ -2,9 +2,9 @@
 
 class Artikel_model extends CI_Model {
 
-	public function tambah_artikel($data_artikel)
+	public function tambah_artikel($data_input)
 	{
-		$this->db->insert('artikel',$data_artikel);
+		$this->db->insert('artikel',$data_input);
 	}
 	
 	public function tampil_artikel()
