@@ -1,0 +1,10 @@
+log 2:
+	-hapus gambar+file nya.
+	-penambahan sukses dan gagal.
+
+log 3:
+	-penambahan fitur pencarian
+	-fix icon edit-hapus
+log 4:
+	-penambahan edit-barang
+	-hapus barang+direktorinya
