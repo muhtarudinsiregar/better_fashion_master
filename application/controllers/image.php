@@ -72,6 +72,14 @@ class Image extends CI_Controller {
         $this->load->view('image/image_upload', $data);
 	}
 
+<<<<<<< HEAD
+=======
+    public function galeri()
+    {
+        $data['galeri'] = $this->image_model->galeri();
+        $this->load->view('image/galeri', $data);
+    }
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 
 }
 

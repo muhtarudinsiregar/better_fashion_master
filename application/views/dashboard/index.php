@@ -7,12 +7,23 @@
 			<!-- <ol class="breadcrumb">
 				<li class="active"><i class="fa fa-dashboard"></i> Dashboard</li>
 			</ol> -->
+<<<<<<< HEAD
 			<!--  -->
 			<?php echo $this->session->flashdata('message'); ?>
 		</div>
 	</div><!-- /.row -->
 	<div class="row">
 		<div class="col-lg-4">
+=======
+			<div class="alert alert-success alert-dismissable">
+				<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+				Selamat Datang di Halaman Admin 
+			</div>
+		</div>
+	</div><!-- /.row -->
+	<div class="row">
+		<div class="col-lg-3">
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 			<div class="panel panel-success">
 				<div class="panel-heading">
 					<div class="row">
@@ -39,16 +50,28 @@
 				</a>
 			</div>
 		</div>
+<<<<<<< HEAD
 		<div class="col-lg-4">
+=======
+		<div class="col-lg-3">
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 			<div class="panel panel-warning">
 				<div class="panel-heading">
 					<div class="row">
 						<div class="col-xs-6">
+<<<<<<< HEAD
 							<i class="fa fa-envelope fa-5x"></i>
 						</div>
 						<div class="col-xs-6 text-right">
 							<p class="announcement-heading"><?php echo $pesan_unread; ?></p>
 							<p class="announcement-text"> Pesan Baru</p>
+=======
+							<i class="fa fa-check fa-5x"></i>
+						</div>
+						<div class="col-xs-6 text-right">
+							<p class="announcement-heading">12</p>
+							<p class="announcement-text">To-Do Items</p>
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 						</div>
 					</div>
 				</div>
@@ -56,7 +79,11 @@
 					<div class="panel-footer announcement-bottom">
 						<div class="row">
 							<div class="col-xs-6">
+<<<<<<< HEAD
 								Tampilkan Semua Pesan
+=======
+								Complete Tasks
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 							</div>
 							<div class="col-xs-6 text-right">
 								<i class="fa fa-arrow-circle-right"></i>
@@ -68,7 +95,11 @@
 		</div>
 	</div><!-- /.row -->
 	<div class="row">
+<<<<<<< HEAD
 		<div class="col-lg-4">
+=======
+			<div class="col-lg-4">
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 			<div class="panel panel-default">
 				<div class="panel-heading">
 					<h3 class="panel-title"><i class="fa fa-folder"></i> Daftar Artikel Terbaru</h3>
@@ -102,6 +133,7 @@
 					</div>
 					<div class="text-right">
 						<?php echo anchor('artikel/tambah_artikel', 'Tambah Artikel'); ?>
+<<<<<<< HEAD
 						<!-- <a href="#">Lihat Semua Pos <i class="fa fa-arrow-circle-right"></i></a> -->
 					</div>
 				</div>
@@ -179,6 +211,10 @@
 					<button type="submit" class="btn btn-primary text-right">Send <span><i class="fa fa-arrow-circle-right"></i></span></button>
 					<!-- <button type="reset" class="btn btn-default">Reset</button> -->
 					<?php echo form_close(); ?>
+=======
+						<a href="#">View All Transactions <i class="fa fa-arrow-circle-right"></i></a>
+					</div>
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 				</div>
 			</div>
 		</div>

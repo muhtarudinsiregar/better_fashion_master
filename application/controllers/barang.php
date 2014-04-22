@@ -24,7 +24,11 @@ class Barang extends CI_Controller {
      {
      	$data = array(
      		'judul'=>"Detail Barang",
+<<<<<<< HEAD
                'content'=>'barang/portofolio_barang',
+=======
+     		'content'=>'barang/portofolio_barang',
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
      		'detail_barang'=>$this->barang_model->detail_barang($id)
      		);
      	$this->load->view('template/admin/index', $data);
@@ -63,7 +67,10 @@ class Barang extends CI_Controller {
      	$data = array(
      		'judul'=>'Edit Barang',
      		'content'=>'barang/edit_barang',
+<<<<<<< HEAD
                'kategori'=>$this->barang_model->tampil_kategori(),
+=======
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
      		'data_edit'=>$this->barang_model->edit_barang($id)
      		);
 
@@ -123,17 +130,29 @@ class Barang extends CI_Controller {
                else
                {
                     $data['error'] = $this->image_lib->display_errors();
+<<<<<<< HEAD
                     $this->load->view('barang/error', $data);
                }
 
+=======
+               }
+
+
+               
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
                     redirect('barang');
                    // return true;
           }
           else
           {
+<<<<<<< HEAD
               echo $data['error'] = 'error ';
                // $error = array('error' => $this->upload->display_errors());
                // var_dump($data['error']);
+=======
+               $data['error'] = $this->image_lib->display_errors();
+               $error = array('error' => $this->upload->display_errors());
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
                 // $this->load->view('barang/error', $data);
           }
      	// $data_update = array(
@@ -158,8 +177,13 @@ class Barang extends CI_Controller {
      		'max_width' => '3000',
      		'max_height' => '3000'
      		)); 
+<<<<<<< HEAD
 
           $this->load->library('upload', $config);
+=======
+     	$this->load->library('upload', $config);
+
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
      	if($this->upload->do_upload())
      	{
      		$data_upload = $this->upload->data();
@@ -216,8 +240,12 @@ class Barang extends CI_Controller {
 
      	$data = [
      	'content'=>"barang/image_upload",
+<<<<<<< HEAD
      	'judul'=>"Tambah Barang",
           'kategori'=> $this->barang_model->tampil_kategori()
+=======
+     	'judul'=>"Tambah Barang"
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
      	];
      	$this->load->view('template/admin/index', $data);
      }

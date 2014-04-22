@@ -9,6 +9,7 @@ class User extends CI_Controller {
 
 	}
 
+<<<<<<< HEAD
 	public function tes()
 	{
 		$data['judul'] = "HAlaman TES";
@@ -17,6 +18,8 @@ class User extends CI_Controller {
 		// var_dump($data['content']);
 	}
 	
+=======
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 		// List all your items
 	public function index( $offset = 0 )
 	{

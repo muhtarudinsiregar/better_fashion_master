@@ -14,8 +14,11 @@ class Dashboard extends CI_Controller {
         $data = [
             'jumlah_post' => $this->dashboard_model->jml_artikel(),
             'artikel_terbaru' => $this->dashboard_model->artikel_terbaru(),
+<<<<<<< HEAD
             'pesan_unread' => $this->dashboard_model->pesan(),
             'pesan_terbaru' => $this->dashboard_model->pesan_terbaru(),
+=======
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
             'content' => "dashboard/index",
             'judul' => "Dashboard"
             ];

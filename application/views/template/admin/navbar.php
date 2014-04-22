@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 s <body>
+=======
+ <body>
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
  	<div id="wrapper">
 
  		<!-- Sidebar -->
@@ -43,7 +47,10 @@ s <body>
  					<!-- <li><a href="<?php echo site_url('artikel'); ?>"><i class="fa fa-table"></i> Tambah Artikel</a></li> -->
  					<li><a href="<?php echo site_url('kategori'); ?>"><i class="glyphicon glyphicon-list-alt"></i> Kategori</a></li>
  					<li><a href="<?php echo site_url('about/edit'); ?>"><i class="fa fa-font"></i> Visi dan Misi</a></li>
+<<<<<<< HEAD
  					<li><a href="<?php echo site_url('contact'); ?>"><i class="fa fa-envelope"></i> Pesan Kontak</a></li>
+=======
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
  					<li><a href="<?php echo site_url('dashboard/setting_blog'); ?>"> <i class="fa fa-wrench"></i> Pengaturan Blog</a></li>
  				</ul>
 
@@ -56,7 +63,11 @@ s <body>
  							<li><a href="#"><i class="fa fa-envelope"></i> Inbox <span class="badge">7</span></a></li>
  							<li><a href="#"><i class="fa fa-gear"></i> Settings</a></li>
  							<li class="divider"></li>
+<<<<<<< HEAD
  							<li><a href="login/logout"><i class="fa fa-power-off"></i> Log Out</a></li>
+=======
+ 							<li><a href="#"><i class="fa fa-power-off"></i> Log Out</a></li>
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
  						</ul>
  					</li>
  				</ul>

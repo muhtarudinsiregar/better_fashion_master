@@ -5,6 +5,7 @@ class Home extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
+<<<<<<< HEAD
 		$this->load->model('home_model');
 		$this->load->helper('text');
 	}
@@ -80,6 +81,23 @@ class Home extends CI_Controller {
      	
     }
 
+=======
+		$this->load->model('barang_model');
+	}
+	public function index()
+	{
+		$data['data_gambar'] = $this->barang_model->galeri();
+		$data['data_kategori'] = $this->barang_model->tampil_kategori();
+
+		$this->load->view('home/home',$data);		
+	}
+
+	public function kategori()
+	{
+	
+	}
+
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 
 }
 

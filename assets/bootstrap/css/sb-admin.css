@@ -9,7 +9,20 @@ For more info and more free Bootstrap 3 HTML themes, visit http://startbootstrap
 /* ATTN: This is mobile first CSS - to update 786px and up screen width use the media query near the bottom of the document! */
 
 /* Global Styles */
+<<<<<<< HEAD
 
+=======
+.login-heading{
+  background-color: #f8f8f8;
+}
+.body-login{
+  background-color: #f8f8f8;
+}
+.login-panel{
+  margin-top: 85px;
+  /*background-color: #f8f8f8;*/
+}
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 #cari{
   margin-bottom: 20px;
 }

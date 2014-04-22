@@ -11,11 +11,19 @@ class About extends CI_Controller {
 	{
         $data = array(
             'tampil'=>$this->about_model->tampil_visimisi(),
+<<<<<<< HEAD
             'judul'=>'My Contact'
             );
         // var_dump($data['tampil']);
         $this->load->view('home/contact', $data);
         $this->session->set_flashdata('message', 'div class="success">Your message has been sent. Thank you!</div>');
+=======
+            'content'=>'home/about',
+            'judul'=>'About Us'
+            );
+        // var_dump($data['tampil']);
+        $this->load->view('template/index', $data);
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 	}
     // ======================dashboard===================
 	public function edit()

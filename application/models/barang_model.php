@@ -50,7 +50,10 @@ class Barang_model extends CI_Model {
 		$query = $this->db->get_where('barang',array('id' =>$id));
 		return $query->row();
 	}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 }
 
 /* End of file image_model.php */

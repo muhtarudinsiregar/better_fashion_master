@@ -17,7 +17,11 @@
 
 					<div class="table-responsive">
 					<div class="text-left form-group">
+<<<<<<< HEAD
 						<?php echo anchor('barang/upload_barang', 'Tambah Barang','class="btn btn-info control-label"'); ?>
+=======
+						<?php echo anchor('barang/upload_barang', 'Tambah Barang','class="btn btn-primary control-label"'); ?>
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 					</div>
 						<table class="table table-bordered table-hover table-striped tablesorter">
 							<thead>

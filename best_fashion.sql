@@ -3,7 +3,11 @@
 -- http://www.phpmyadmin.net
 --
 -- Inang: 127.0.0.1
+<<<<<<< HEAD
 -- Waktu pembuatan: 22 Apr 2014 pada 11.17
+=======
+-- Waktu pembuatan: 01 Apr 2014 pada 15.33
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 -- Versi Server: 5.5.32
 -- Versi PHP: 5.4.19
 
@@ -56,7 +60,11 @@ CREATE TABLE IF NOT EXISTS `artikel` (
   `status` varchar(30) NOT NULL,
   `tag` text NOT NULL,
   PRIMARY KEY (`id`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
+=======
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=11 ;
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 
 --
 -- Dumping data untuk tabel `artikel`
@@ -65,8 +73,16 @@ CREATE TABLE IF NOT EXISTS `artikel` (
 INSERT INTO `artikel` (`id`, `judul`, `tanggal`, `isi`, `status`, `tag`) VALUES
 (3, 'diskon123', '21:38:24 2014-03-16', '<p>diskon akhir tahun emang keren</p>', 'publish', 'celana-panjang,street-jeans'),
 (4, 'diskon', '07:16:45 2014-02-01', '<p>diskon akhir tahun emang kerenq</p>', 'publish', 'baju,baju-jeans,baju-bajuan'),
+<<<<<<< HEAD
 (6, 'diskon baru akhir tahun', '22:01:29 2014-03-18', 'ada yang baru lho dari better fashion <3', 'publish', 'tag,afafaf,asas'),
 (7, 'tes', '09:53:27 2014-04-14', 'tes', 'Publish', 'tes,tesa1,rres,ta');
+=======
+(5, 'latihan posting', '13:46:29 2014-03-16', 'latihan dong', 'draft', 'celana,celana-macan-tutul'),
+(6, 'diskon baru akhir tahun', '22:01:29 2014-03-18', 'ada yang baru lho dari better fashion <3', 'publish', 'tag,afafaf,asas'),
+(8, 'judul-judulan', '15:21:43 2014-04-01', 'postingan', 'Publish', 'tag,tags,tag2'),
+(9, 'te', '15:22:33 2014-04-01', 'ssas', 'Draft', 'as'),
+(10, 'tes', '16:14:10 2014-04-01', 'tes', 'Draft', '12,41,4');
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 
 -- --------------------------------------------------------
 
@@ -84,13 +100,18 @@ CREATE TABLE IF NOT EXISTS `barang` (
   `foto_asli` varchar(250) NOT NULL,
   `tags` varchar(250) NOT NULL,
   PRIMARY KEY (`id`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=12 ;
+=======
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=27 ;
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 
 --
 -- Dumping data untuk tabel `barang`
 --
 
 INSERT INTO `barang` (`id`, `nama`, `harga`, `detail_barang`, `kategori`, `foto`, `foto_asli`, `tags`) VALUES
+<<<<<<< HEAD
 (2, 'gorillaz concert tes baru ni', 100000, 'cotton combed 10x cek 123', '1', '12_thumb.JPG', '12.JPG', 'tes'),
 (4, 'baju ', 9000, 'harga', '1', '1235445_10200127664107855_448582382_n_thumb.jpg', '', ''),
 (6, 'abingdon boys clothing', 50000, 'baju  karya abingdon boys for u all, grab it fast!!!', '2', 'wallpaper-653922_thumb.jpg', '', 'band,abingdon boys,japan'),
@@ -135,6 +156,12 @@ INSERT INTO `contact` (`id`, `nama`, `email`, `message`, `status`, `tanggal`) VA
 (23, 'qw', 'qw', 'qw', 1, ''),
 (24, 'qw', 'qw', 'qw', 1, ''),
 (25, 'qw', 'qw', 'qw', 1, '');
+=======
+(2, 'gorillaz concert', 100000, 'cotton combed 10x', 'baju', 'wallpaper-245827_thumb.jpg', '', ''),
+(4, 'baju ', 9000, 'harga', 'baju', '1235445_10200127664107855_448582382_n_thumb.jpg', '', ''),
+(6, 'abingdon boys clothing', 50000, 'baju  karya abingdon boys for u all, grab it fast!!!', 'baju', 'wallpaper-653922_thumb.jpg', '', 'band,abingdon boys,japan'),
+(7, 'LLoyd ', 120000, 'terbuat dari bahan yang alami. dari dari benang-benang pilihan terbaik.', 'baju', 'lloud-hairstyle-s1_thumb.jpg', 'lloud-hairstyle-s1.jpg', 'cloth,men,casual,better fashion,jeans');
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 
 -- --------------------------------------------------------
 
@@ -167,7 +194,11 @@ CREATE TABLE IF NOT EXISTS `kategori` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nama` varchar(20) NOT NULL,
   PRIMARY KEY (`id`)
+<<<<<<< HEAD
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=61 ;
+=======
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=79 ;
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 
 --
 -- Dumping data untuk tabel `kategori`
@@ -217,7 +248,11 @@ CREATE TABLE IF NOT EXISTS `setting` (
 --
 
 INSERT INTO `setting` (`id_setting`, `facebook`, `twitter`, `email`, `g_plus`, `no_telpon`, `informasi`) VALUES
+<<<<<<< HEAD
 (1, 'https://www.facebook.com/better-fashion', 'https://twitter.com/better_fashion', 'better_fashion@gmail.com', 'https://plus.google.com/u/0/112271661378486753881', '087755925565', 'Better Fashion adalah distro untuk kawula muda yang berada di daerah jgj1');
+=======
+(1, 'https://www.facebook.com/better-fashion', 'https://twitter.com/better_fashion', 'better_fashion@gmail.com', 'https://plus.google.com/u/0/112271661378486753881', '087755925565', 'Better Fashion adalah distro untuk kawula muda yang berada di daerah');
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 
 -- --------------------------------------------------------
 
@@ -251,7 +286,11 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
+<<<<<<< HEAD
 (1, '\0\0', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, '10bd3f40a4ebb18c8e7165019d352680f5f34bc7', 1268889823, 1397548203, 1, 'Admin', 'istrator', 'ADMIN', '0');
+=======
+(1, '\0\0', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, '10bd3f40a4ebb18c8e7165019d352680f5f34bc7', 1268889823, 1393734259, 1, 'Admin', 'istrator', 'ADMIN', '0');
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 
 -- --------------------------------------------------------
 

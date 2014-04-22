@@ -12,6 +12,11 @@ class Kategori extends CI_Controller {
 
 	public function index()
 	{
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 		$data['content'] = 'kategori/tampil_kategori';
     	$data['tampil'] = $this->kategori_model->tampil_kategori();
 		$data['judul'] = 'Tampil Kategori';

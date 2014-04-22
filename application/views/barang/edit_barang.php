@@ -1,7 +1,11 @@
 <div id="page-wrapper">
 	<div class="row">
 		<div class="col-lg-12">
+<<<<<<< HEAD
 			<h3>Edit Barang<span class="ico-setting"><i class="fa fa-shopping-cart"></i></span></h3>
+=======
+			<h3>Tambah Barang<span class="ico-setting"><i class="fa fa-shopping-cart"></i></span></h3>
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 		</div>
 	</div><!-- /.row -->
 
@@ -28,6 +32,7 @@
 							<label for="kategori" class="control-label col-lg-3">Kategori :</label>
 							<div class="col-lg-3">
 								<select name="kategori" class="form-control">
+<<<<<<< HEAD
 									<?php 
 										foreach ($kategori->result() as $value) {
 											
@@ -35,6 +40,10 @@
 									<option value="<?php echo $value->id ?>"><?php echo $value->nama; ?></option>
 									<?php 
 									} ?>
+=======
+									<option value="baju">Baju</option>
+									<option value="celana_panjang">Celana Panjang</option>
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 								</select>
 							</div>
 						</div>

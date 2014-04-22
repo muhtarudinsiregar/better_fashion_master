@@ -13,10 +13,18 @@ class Artikel extends CI_Controller {
 	{
 		$data['judul'] = "Halaman Artikel";
 		$data['data_artikel'] = $this->artikel_model->tampil_artikel();
+<<<<<<< HEAD
+=======
+		// var_dump($data['data_artikel']);
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 		$data['content'] = "artikel/tampil_artikel";
 		$this->load->view('template/admin/index',$data);
 	}
 	
+<<<<<<< HEAD
+=======
+		// Add a new item
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 	public function tambah_artikel()
 	{
 
@@ -101,6 +109,26 @@ class Artikel extends CI_Controller {
 		redirect('artikel');
 		
 	}
+<<<<<<< HEAD
+=======
+
+	
+
+
+	
+
+	public function blog()
+	{
+		$data['artikel'] = $this->artikel_model->tampil_artikel();
+		$data = array(
+            'artikel'=>$this->artikel_model->tampil_artikel(),
+            'content'=>'artikel/blog',
+            'judul'=>'Blog'
+            );
+		
+		$this->load->view('template/index',$data);
+	}
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 }
 /* End of file artikel.php */
 /* Location: ./application/controllers/artikel.php */

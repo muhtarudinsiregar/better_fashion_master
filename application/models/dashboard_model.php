@@ -42,6 +42,7 @@ class Dashboard_model extends CI_Model {
 		return $query->result();
 	}
 
+<<<<<<< HEAD
 	function pesan()
 	{
 		$this->db->select('status');
@@ -59,6 +60,8 @@ class Dashboard_model extends CI_Model {
 		return $query->result();
 	}
 
+=======
+>>>>>>> 8b5b107712a4d44b224f16215874faa20ddd7c46
 	
 
 }
